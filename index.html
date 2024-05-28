@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Select Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="d-flex mx-auto w-25 pb-3">
+            <label for="numCardDrawInput" class="input-group-text border-0 rounded-0">
+                <small> <i class="fa-regular fa-face-smile"></i></small></label>
+            <input type="number" id="numCardDrawInput" placeholder="#" class="form-control border-0 rounded-0" />
+            <button id="drawButton" class="btn btn-light w-100 rounded-0">
+                <strong>DRAW</strong>
+            </button>
+            <button id="sortButton" class="btn btn-dark w-100 rounded-0">
+                <strong>SORT</strong>
+            </button>
+        </div>
+        <h6 class="m-4">Draw Cards</h6>
+       <div id="cardContainer" class="d-flex"></div>
+       <h6 class="m-4">Sorted Cards</h6>
+       <div id="sortedCardContainer" class="d-flex"></div>
+       <h6 class="m-4">Sorted Cards Log</h6>
+       <div id="sortingStepsDiv" class="flex-container"></div>
+
+</div>
+        <script src="main.js"></script>
+</body>
+
+</html>
