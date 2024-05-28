@@ -25,7 +25,7 @@ window.onload = function () {
             cardContainer.innerHTML = "";
             sortingStepsDiv.innerHTML = "";
             sortedCardContainer.innerHTML = "";
-            drawnCards.length = 0; // Clear drawn cards array
+            drawnCards.length = 0;
 
             // DRAW NEW
             for (let i = 0; i < numCardsToDraw; i++) {
@@ -54,15 +54,14 @@ window.onload = function () {
             swapped = false;
             for (let i = 0; i < cards.length - 1; i++) {
                 if (cards[i].value > cards[i + 1].value) {
-                    [cards[i], cards[i + 1]] = [cards[i + 1], cards[i]]; // Swap
+                    [cards[i], cards[i + 1]] = [cards[i + 1], cards[i]]; 
                     swapped = true;
-                    log.push({ state: [...cards] }); // Log the state after each swap
+                    log.push({ state: [...cards] }); 
                 }
             }
         } while (swapped);
 
-        // Display log
-        sortingStepsDiv.innerHTML = ""; // Clear previous logs
+        // SORT LOG
         log.forEach(step => {
             const stepElement = document.createElement("div");
             stepElement.className = "sorting-step d-flex";
@@ -89,12 +88,11 @@ window.onload = function () {
 
     // SORT BUTTON CLICK EVENT
     sortButton.addEventListener("click", function () {
-        const sortedCards = bubbleSort([...drawnCards]); // Sort the drawn cards
-        sortedCardContainer.innerHTML = "";
+        const sortedCards = bubbleSort([...drawnCards])
 
         for (let i = 0; i < sortedCards.length; i++) {
             const card = sortedCards[i];
-            const sortedCard = document.createElement("div");
+            const sortedCard = document.createElement("div")
             sortedCard.className = "p-2 m-2 border border-success rounded-2 card";
             sortedCard.classList.add(card.suit);
             sortedCard.innerHTML = `
@@ -102,7 +100,7 @@ window.onload = function () {
                 <div class="num">${card.value}</div>
                 <div class="bottomSymbol">${card.suit}</div>
             `;
-            sortedCardContainer.appendChild(sortedCard);
+            sortedCardContainer.appendChild(sortedCard)
         }
-    });
-};
+    })
+}
